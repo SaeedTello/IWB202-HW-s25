@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوجبات - مطعم المحيط</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="myFunctions.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="home.html" class="logo">🍽️ مطعم المحيط</a>
+            <ul class="nav-links">
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="Meals.html" class="active">الوجبات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>قائمة الوجبات</h1>
+            <p>اختر وجباتك ثم اضغط متابعة</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">الوجبات المتوفرة</h2>
+            <div class="table-responsive">
+                <table class="meals-table">
+                    <thead>
+                        <tr>
+                            <th>صورة</th><th>الرمز</th><th>الوجبة</th><th>السعر</th><th>إظهار التفاصيل</th><th>اختيار</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- وجبة 1 -->
+                        <tr class="meal-row">
+                            <td class="img-cell">🐟</td>
+                            <td>SF-001</td>
+                            <td>سمك بوري مشوي لشخصين</td>
+                            <td>110,000 ل.س</td>
+                            <td><button class="toggle-btn" data-target="det1">إظهار التفاصيل</button></td>
+                            <td><input type="checkbox" class="meal-check" value="SF-001" data-price="110000" data-name="سمك بوري مشوي لشخصين"></td>
+                        </tr>
+                        <tr class="details-row" id="det1" style="display:none;">
+                            <td colspan="6">
+                                <table class="inner-details">
+                                    <tr>
+                                        <td class="label">الصورة</td>
+                                        <td>
+                                            <img src="images/IWB-IMG-1.webp" alt="سمك بوري مشوي" class="detail-img">
+                                        </td>
+                                    </tr>
+                                    <tr><td class="label">المطبخ</td><td>مصري</td></tr>
+                                    <tr><td class="label">التصنيف</td><td>مأكولات بحرية</td></tr>
+                                    <tr><td class="label">المكونات</td><td>4 سمكات بوري أحمر، أوريجانو، ملح، فلفل أسود، زيت زيتون، 3 فصوص ثوم، فلفل أحمر، 6 طماطم، عصير ليمونة، بقدونس</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- وجبة 2 -->
+                        <tr class="meal-row">
+                            <td class="img-cell">🍗</td>
+                            <td>SF-002</td>
+                            <td>شاورما دجاج سوري</td>
+                            <td>75,000 ل.س</td>
+                            <td><button class="toggle-btn" data-target="det2">إظهار التفاصيل</button></td>
+                            <td><input type="checkbox" class="meal-check" value="SF-002" data-price="75000" data-name="شاورما دجاج سوري"></td>
+                        </tr>
+                        <tr class="details-row" id="det2" style="display:none;">
+                            <td colspan="6">
+                                <table class="inner-details">
+                                    <tr>
+                                        <td class="label">الصورة</td>
+                                        <td>
+                                            <img src="images/IWB-IMG-2.webp" alt="شاورما دجاج" class="detail-img">
+                                        </td>
+                                    </tr>
+                                    <tr><td class="label">المطبخ</td><td>سوري</td></tr>
+                                    <tr><td class="label">التصنيف</td><td>وجبات سريعة</td></tr>
+                                    <tr><td class="label">المكونات</td><td>دجاج، ثوم، ليمون، بهارات شاورما، خبز صاج، طحينية، مخلل، بطاطا</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- وجبة 3 -->
+                        <tr class="meal-row">
+                            <td class="img-cell">🥩</td>
+                            <td>SF-003</td>
+                            <td>كبة مشوية</td>
+                            <td>90,000 ل.س</td>
+                            <td><button class="toggle-btn" data-target="det3">إظهار التفاصيل</button></td>
+                            <td><input type="checkbox" class="meal-check" value="SF-003" data-price="90000" data-name="كبة مشوية"></td>
+                        </tr>
+                        <tr class="details-row" id="det3" style="display:none;">
+                            <td colspan="6">
+                                <table class="inner-details">
+                                    <tr>
+                                        <td class="label">الصورة</td>
+                                        <td>
+                                            <img src="images/IWB-IMG-3.webp" alt="كبة مشوية" class="detail-img">
+                                        </td>
+                                    </tr>
+                                    <tr><td class="label">المطبخ</td><td>سوري</td></tr>
+                                    <tr><td class="label">التصنيف</td><td>مقبلات</td></tr>
+                                    <tr><td class="label">المكونات</td><td>برغل، لحم، بصل، صنوبر، بهارات كبة، زيت زيتون، لبن</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- وجبة 4 -->
+                        <tr class="meal-row">
+                            <td class="img-cell">🍛</td>
+                            <td>SF-004</td>
+                            <td>منسف أردني</td>
+                            <td>150,000 ل.س</td>
+                            <td><button class="toggle-btn" data-target="det4">إظهار التفاصيل</button></td>
+                            <td><input type="checkbox" class="meal-check" value="SF-004" data-price="150000" data-name="منسف أردني"></td>
+                        </tr>
+                        <tr class="details-row" id="det4" style="display:none;">
+                            <td colspan="6">
+                                <table class="inner-details">
+                                    <tr>
+                                        <td class="label">الصورة</td>
+                                        <td>
+                                            <img src="images/IWB-IMG-4.webp" alt="منسف أردني" class="detail-img">
+                                        </td>
+                                    </tr>
+                                    <tr><td class="label">المطبخ</td><td>أردني</td></tr>
+                                    <tr><td class="label">التصنيف</td><td>أطباق رئيسية</td></tr>
+                                    <tr><td class="label">المكونات</td><td>لحم غنم، جميد، أرز، خبز شراك، صنوبر ولوز</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- وجبة 5 -->
+                        <tr class="meal-row">
+                            <td class="img-cell">🍕</td>
+                            <td>SF-005</td>
+                            <td>بيتزا مارغريتا</td>
+                            <td>85,000 ل.س</td>
+                            <td><button class="toggle-btn" data-target="det5">إظهار التفاصيل</button></td>
+                            <td><input type="checkbox" class="meal-check" value="SF-005" data-price="85000" data-name="بيتزا مارغريتا"></td>
+                        </tr>
+                        <tr class="details-row" id="det5" style="display:none;">
+                            <td colspan="6">
+                                <table class="inner-details">
+                                    <tr>
+                                        <td class="label">الصورة</td>
+                                        <td>
+                                            <img src="images/IWB-IMG-5.webp" alt="بيتزا مارغريتا" class="detail-img">
+                                        </td>
+                                    </tr>
+                                    <tr><td class="label">المطبخ</td><td>إيطالي</td></tr>
+                                    <tr><td class="label">التصنيف</td><td>وجبات سريعة</td></tr>
+                                    <tr><td class="label">المكونات</td><td>عجينة بيتزا، صلصة طماطم، موزاريلا، ريحان، زيت زيتون</td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="action-center">
+                <button id="btnContinue" class="btn-main">متابعة</button>
+            </div>
+        </section>
+
+        <!-- نموذج الطلب -->
+        <section id="orderFormSection" style="display:none;" class="section">
+            <h2 class="section-title">نموذج تقديم الطلب</h2>
+            <div class="card form-card">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label>الاسم الكامل (عربي - اختياري):</label>
+                        <input type="text" id="fullName" placeholder="الاسم بالعربية">
+                    </div>
+                    <div class="form-group">
+                        <label>الرقم الوطني (11 خانة) <span style="color:red;">*</span>:</label>
+                        <input type="text" id="nationalId" maxlength="11" placeholder="01123456789">
+                        <small>أول خانتين 01-14 للمحافظة</small>
+                    </div>
+                    <div class="form-group">
+                        <label>تاريخ الولادة (dd-mm-yyyy - اختياري):</label>
+                        <input type="text" id="birthDate" placeholder="15-06-1995">
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الموبايل (Syriatel/MTN - اختياري):</label>
+                        <input type="text" id="mobileNumber" maxlength="10" placeholder="09xxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label>الإيميل (اختياري):</label>
+                        <input type="text" id="email" placeholder="example@domain.com">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="btnSubmit" class="btn-submit">إرسال</button>
+                        <button type="reset" class="btn-reset">مسح</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- نافذة الملخص -->
+        <div class="modal-overlay" id="resultModal" style="display:none;">
+            <div class="modal-box">
+                <div class="modal-head">
+                    <h2>ملخص الطلب</h2>
+                    <span id="closeModal" style="cursor:pointer;font-size:1.5rem;">&times;</span>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-foot">
+                    <button id="btnCloseModal" class="btn-main">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 مطعم المحيط - S25 Assignment</p></div>
+    </footer>
+</body>
+</html>
