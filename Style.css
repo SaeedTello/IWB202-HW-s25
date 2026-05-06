@@ -49,19 +49,12 @@ body {
 }
 .nav-links li a {
   display: block;
-  color: #ddd;
+  color: white;
+  background-color: #c0392b;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: 500;
-}
-.nav-links li a:hover {
-  background-color: #c0392b;
-  color: white;
-}
-.nav-links li a.active {
-  background-color: #c0392b;
-  color: white;
 }
 
 .hero-section {

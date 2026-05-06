@@ -18,10 +18,8 @@ $(function () {
     var row = $("#" + id);
     if (row.is(":visible")) {
       row.hide();
-      $(this).text("إظهار التفاصيل");
     } else {
       row.show();
-      $(this).text("إخفاء التفاصيل");
     }
   });
 
